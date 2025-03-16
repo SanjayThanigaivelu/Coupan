@@ -23,7 +23,7 @@ function ClaimCoupon() {
             setApiLoading(false);
             localStorage.setItem('userCoupon', response.data.coupon);
             setCoupon(response.data.coupon);
-            setMessage(response.data.message);
+            setMessage(response.data.message)
         } catch (error: unknown) {
             console.error("Frontend Error:", error); // Log full error in the browser console
             if (axios.isAxiosError(error)) {
