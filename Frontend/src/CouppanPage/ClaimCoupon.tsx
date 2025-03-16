@@ -1,8 +1,11 @@
 import {useState} from 'react';
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 import './ClaimCoupon.css';
 import loginBackground2 from  '../../assets/loginBackground2.jpg'
 function ClaimCoupon() {
+
+    const navigate = useNavigate();
 
     const [message, setMessage] = useState<string>('');
     const [coupon, setCoupon] = useState<string | null>(null);
@@ -36,7 +39,7 @@ function ClaimCoupon() {
             });
     
             alert("Login Successful!");
-            window.location.href = "/admin"; // Redirect admin
+            navigate("/admin");// Redirect admin
         } catch (err) {
             
             alert(err instanceof Error ? err.message : "Something went wrong!");
