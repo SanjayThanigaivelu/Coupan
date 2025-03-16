@@ -17,7 +17,7 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
-// Routes
+
 app.use('/auth', authRoutes);
 app.use('/coupon', couponRoutes);
 
