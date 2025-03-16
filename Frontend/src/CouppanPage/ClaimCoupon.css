@@ -129,3 +129,106 @@ html,body{
 .modal-box button:hover {
     background: #0056b3;
 }
+@media only screen and (max-width:350px){
+
+    .butt {
+        position: absolute;  
+        top: 50%;  
+        left: 50%;  
+        transform: translate(-50%, -50%); 
+        background-color:palevioletred ;
+        width: 150px;
+    }
+
+    .Admin{
+        position: absolute;  
+        top: 70%;  
+        left: 50%;  
+        transform: translate(-50%, -50%); 
+        font-size: 16px;
+        width: 150px;
+        color: Black;
+        border: none;
+        cursor: pointer;
+        background-color: yellow;
+    }
+}
+
+@media only screen and (min-width:350px) and (max-width:500px) {
+
+    .butt {
+        position: absolute;  
+        top: 50%;  
+        left: 50%;  
+        transform: translate(-50%, -50%); 
+        background-color:palevioletred ;
+        width: 250px;
+    }
+
+    .Admin{
+        position: absolute;  
+        top: 70%;  
+        left: 50%;  
+        transform: translate(-50%, -50%); 
+        font-size: 16px;
+        width: 250px;
+        color: Black;
+        border: none;
+        cursor: pointer;
+        background-color: yellow;
+    }
+
+
+}
+@media only screen and (min-width:501px) and (max-width:650px) {
+
+    .butt {
+        position: absolute;  
+        top: 50%;  
+        left: 30%;  
+        transform: translate(-50%, -50%); 
+        background-color:palevioletred ;
+        width: 180px;
+    }
+
+    .Admin{
+        position: absolute;  
+        top: 50%;  
+        left: 70%;  
+        transform: translate(-50%, -50%); 
+        font-size: 16px;
+        width: 180px;
+        color: Black;
+        border: none;
+        cursor: pointer;
+        background-color: yellow;
+    }
+    
+
+}
+@media only screen and (min-width:651px) and (max-width:970px) {
+
+    .butt {
+        position: absolute;  
+        top: 50%;  
+        left: 30%;  
+        transform: translate(-50%, -50%); 
+        background-color:palevioletred ;
+        width: 250px;
+    }
+
+    .Admin{
+        position: absolute;  
+        top: 50%;  
+        left: 70%;  
+        transform: translate(-50%, -50%); 
+        font-size: 16px;
+        width: 250px;
+        color: Black;
+        border: none;
+        cursor: pointer;
+        background-color: yellow;
+    }
+    
+
+}

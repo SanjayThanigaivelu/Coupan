@@ -128,3 +128,78 @@ top: 40px;
     position: relative;
     top: 25px;
 }
+
+@media only screen and (max-width:350px){
+    
+    .wholeContainer {
+        position: fixed; /* Ensures the full page is covered */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .login-container {
+        padding: 30px;
+        width: 70%;
+        height: 350px; 
+        z-index: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(0px);
+        text-align: center;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+       
+        width: 200px;
+        margin: auto;
+     
+    }
+    
+}
+
+@media only screen and (min-width:351px) and (max-width:500px){
+    
+    .wholeContainer {
+        position: fixed; /* Ensures the full page is covered */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .login-container {
+        padding: 30px;
+        width: 80%;
+        height: 350px; 
+        z-index: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(0px);
+        text-align: center;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+       
+        width: 250px;
+        margin: auto;
+     
+    }
+}
