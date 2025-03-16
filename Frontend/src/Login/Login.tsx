@@ -1,6 +1,6 @@
 import  {useState} from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import './Loginstyle.css';
@@ -98,7 +98,7 @@ function Login() {
 
         <div className="login-options">
             <button type="button" className="forgot-password" onClick={handleGuestLogin}>Guest Login</button>
-            <a href="/signup" className="signup-link">Sign Up</a>
+            <Link to="/signup" className="signup-link">Sign Up</Link>
         </div>
        
     </form>
