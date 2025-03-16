@@ -1,54 +1,84 @@
-# React + TypeScript + Vite
+# Coupon Generator - MERN Stack with Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
+The **Coupon Generator** is a full-stack web application built using the **MERN stack** with **Vite** for a modern, high-performance frontend. The core feature of this project is generating unique coupons for individual users, ensuring that each IP address gets only **one coupon**. The application includes **login, signup, and an admin panel**, where the admin has complete control over coupon management.
 
-Currently, two official plugins are available:
+## Project Description
+This application allows users to claim a **unique coupon** based on their IP address. If a user doesn’t want to sign up, a **guest login** option is available. The system provides a smooth user experience with **interactive backgrounds** and **secure authentication mechanisms** like password hashing using **Salt**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Features:
+- **Unique Coupon Generation**: Each user/IP gets a single coupon.
+- **Admin Panel**: Manage (Add, Delete, Modify) coupons.
+- **Secure Authentication**: Password hashing with Salt.
+- **Form Validation**: Used **Yup** for login and signup validations.
+- **Guest Login**: Users can claim a coupon without signing up.
+- **Interactive UI**: Enhanced with animated backgrounds.
+- **REST API Integration**: Uses GET, POST, PUT, DELETE methods for CRUD operations.
 
-## Expanding the ESLint configuration
+---
+## Admin Page
+The **Admin Panel** is the control center for managing coupons. Admins can:
+- **Create new coupons**
+- **Delete existing coupons**
+- **Update coupon statuses** (claimed/unclaimed)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+#### **Admin Credentials:**
+- **Email**: `admin@example.com`
+- **Password**: `Admin@123`
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+_Note: Change these credentials after deployment for security._
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
+## Login & Signup Page
+The authentication system includes:
+- **Signup Page**: Users register using an email and password.
+- **Login Page**: Users sign in securely.
+- **Yup Validation**: Ensures strong password rules.
+- **Password Security**: Uses **Salt Hashing** to store passwords securely.
+- **Guest Mode**: Users can claim a coupon without signing in.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
+## API Endpoints
+| Method | Endpoint | Description |
+|--------|---------|-------------|
+| **POST** | `/api/auth/signup` | Registers a new user |
+| **POST** | `/api/auth/login` | Logs in an existing user |
+| **GET** | `/api/coupons` | Retrieves all coupons |
+| **POST** | `/api/coupons/add` | Adds a new coupon (Admin only) |
+| **PUT** | `/api/coupons/claim/:id` | Toggles claimed status |
+| **DELETE** | `/api/coupons/delete/:id` | Deletes a coupon (Admin only) |
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+## Additional Features
+- **Fast Performance**: Vite is used for an optimized development experience.
+- **Role-Based Access**: Only admins can manage coupons.
+- **Database**: MongoDB is used to store coupon data securely.
+- **State Management**: React hooks are used for efficient state updates.
+- **Responsive Design**: Works smoothly on all devices.
+
+---
+## Installation & Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/coupon-generator.git
+   cd coupon-generator
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Run the backend server:
+   ```bash
+   node server.js
+   ```
+
+---
+## Conclusion
+The **Coupon Generator** provides an interactive and secure coupon system with full admin control. Whether for user engagement, promotions, or giveaways, this app ensures fairness by limiting one coupon per user/IP.
+
+🚀 Happy Coding!
+
