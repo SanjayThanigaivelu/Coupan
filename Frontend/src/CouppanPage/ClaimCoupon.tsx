@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import {useState} from 'react';
 import axios from 'axios';
 import './ClaimCoupon.css';
 import loginBackground2 from  '../../assets/loginBackground2.jpg'
