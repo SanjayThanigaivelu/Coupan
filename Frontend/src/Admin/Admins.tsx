@@ -22,7 +22,7 @@ function Admins() {
 
     async function fetchCoupons() {
         try {
-            const response = await axios.get("http://localhost:5000/coupon/all");
+            const response = await axios.get("https://coupan.onrender.com/coupon/all");
             console.log(" Coupons Data:", response.data);
             setCoupons(response.data);
         } catch (err) {
@@ -34,7 +34,7 @@ function Admins() {
         if (!newCoupon) return alert("Enter a coupon code !");
 
         try {
-            await axios.post("http://localhost:5000/coupon/add", { code: newCoupon });
+            await axios.post("https://coupan.onrender.com/coupon/add", { code: newCoupon });
             setNewCoupon(""); 
             alert("New Coupon was Added Successfully")
             fetchCoupons(); 
@@ -47,7 +47,7 @@ function Admins() {
         if (!window.confirm("Are you sure?")) return;
 
         try {
-            await axios.delete(`http://localhost:5000/coupon/delete/${id}`);
+            await axios.delete(`https://coupan.onrender.com/coupon/delete/${id}`);
             alert("Coupon was deleted Successfully")
             fetchCoupons();
         } catch (err) {
@@ -59,7 +59,7 @@ function Admins() {
        
     
         try {
-           await axios.put(`http://localhost:5000/coupon/claim/${couponId}`, {
+           await axios.put(`https://coupan.onrender.com/coupon/claim/${couponId}`, {
                 claimed: !currentStatus  // Toggle the claimed status
             });
             alert("Changes Made Succesfully Refresh to see...")

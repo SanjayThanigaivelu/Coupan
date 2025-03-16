@@ -12,7 +12,7 @@ function ClaimCoupon() {
 
     const claimCoupon = async () => { 
         try {
-            const response = await axios.post('http://localhost:5000/coupon/claim');
+            const response = await axios.post('https://coupan.onrender.com/coupon/claim');
             setCoupon(response.data.coupon);
             setMessage(response.data.message);
         } catch (error: unknown) {
@@ -30,7 +30,7 @@ function ClaimCoupon() {
         try {
             
     
-             await axios.post("http://localhost:5000/auth/login", adminData, {
+             await axios.post("https://coupan.onrender.com/auth/login", adminData, {
                 withCredentials: true,  // Ensures cookies are sent
                 headers: { "Content-Type": "application/json" },
             });
